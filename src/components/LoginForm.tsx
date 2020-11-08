@@ -2,6 +2,8 @@ import React from 'react';
 import * as Yup from 'yup'
 import { Formik, Form } from 'formik'
 import FormikControl from './FormikControl';
+import { Button } from '@chakra-ui/core'
+
 
 interface ILoginFormProps {
 }
@@ -26,9 +28,9 @@ const LoginForm: React.FunctionComponent<ILoginFormProps> = (props) => {
           {
               formik => {
                   return <Form>
-                      <FormikControl control='input' type='input' label='Email' name='email'/>
-                      <FormikControl control='input' type='password' label='Password' name='password'/>
-                      <button type='submit' disabled={!formik.isValid}>Submit</button>
+                      <FormikControl control='chakrainput' type='input' label='Email' name='email'/>
+                      <FormikControl control='chakrainput' type='password' label='Password' name='password'/>
+                      <Button type='submit' isDisabled={!formik.isValid}>Submit</Button>
                   </Form>
               }
           }

@@ -5,6 +5,7 @@ import CheckboxGroup from './CheckboxGroup';
 import Select from './Select';
 import TextArea from './TextArea';
 import Datepicker from './Datepicker';
+import ChakraInput from './ChakraInput';
 
 interface IOption {
     key: string;
@@ -35,6 +36,8 @@ const FormikControl: React.FunctionComponent<IFormikControlProps> = (props) => {
             return <CheckboxGroup options={options} {...rest}/>
         case 'date':
             return <Datepicker {...rest}/>
+        case 'chakrainput':
+            return <ChakraInput {...rest}/>
         default: return null;
     }
 };
